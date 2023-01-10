@@ -1,0 +1,30 @@
+.temp {
+  position: relative;
+  border-radius: 12px;
+  padding: 1vh 1vw;
+  background-color: var(--body-color);
+  height: fit-content;
+}
+
+.temp .title {
+  font-family: var(--nuclear-family);
+  font-size: var(--xl);
+}
+
+.temp .current {
+  font-size: var(--xxxl);
+}
+
+.temp .feels {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.temp .feels:hover {
+  opacity: 1;
+}
+
+.temp .feels span:last-child {
+  font-size: 16px;
+  margin-left: .3vw;
+}

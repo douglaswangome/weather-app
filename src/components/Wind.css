@@ -1,0 +1,55 @@
+.wind {
+  position: relative;
+  background-color: var(--body-color);
+  border-radius: 12px;
+  color: #fff;
+  padding: 1vh 1vw;
+  height: fit-content;
+}
+
+.wind .title {
+  font-family: var(--nuclear-family);
+  font-size: var(--xl);
+}
+
+.wind .deg, .wind .gust, .wind .speed {
+  display: flex;
+  align-items: center;
+}
+
+.wind .deg span:last-child, .wind .gust span:last-child, .wind .speed span:last-child {
+  margin-left: .3vw;
+  font-size: var(--xl);
+  font-weight: 600;
+}
+
+.wind .info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  /* background: linear-gradient(#fff, var(--container-color)); */
+  background-color: var(--container-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  font-size: var(--xl);
+  transition: 
+    width .6s ease-in-out,
+    opacity .4s ease-in;
+}
+
+.wind:hover .info {
+  width: 50%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .wind .info {
+    display: flex;
+    flex-direction: column;
+  }
+}

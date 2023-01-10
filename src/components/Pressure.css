@@ -1,0 +1,23 @@
+.pressure {
+  background-color: var(--body-color);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1vh 1vw;
+  height: fit-content;
+}
+
+.pressure .title {
+  font-family: var(--nuclear-family);
+  font-size: var(--xl);
+}
+
+.pressure div {
+  display: flex;
+  align-items: center;
+}
+
+.pressure div span:first-child {
+  margin-right: .3vw;
+  font-size: var(--xl);
+  font-weight: 600;
+}

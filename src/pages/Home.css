@@ -1,0 +1,324 @@
+.home {
+  position: relative;
+  font-family: var(--exten-family);
+  font-size: var(--l);
+}
+
+.home .top {
+  position: relative;
+  display: flex;
+  padding: 2vh 1vw;
+  color: #ffffff;
+  background: linear-gradient(var(--body-color), #ffffff);
+}
+
+.home .top .main {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#ffffff, var(--container-color));
+  border-radius: 12px;
+  padding: 1vh 1vw;
+  margin-inline: 1vw;
+}
+
+.home .top .main img {
+  width: 70%;
+  object-fit: contain;
+  margin-bottom: 0vh;
+}
+
+.home .top .main .other {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 1vh 1vw;
+}
+
+.home .top .main .other span:first-child {
+  text-transform: capitalize;
+  font-family: var(--family);
+  font-size: var(--xxxl);
+  font-weight: 400;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.home .top .main .other .clouds {
+  margin-inline: auto;
+  margin-block: .5vh;
+}
+
+.home .top .main .other .clouds span {
+  font-size: var(--l);
+  font-family: var(--exten-family);
+  font-weight: 600;
+}
+
+.home .top .main .other .visibility {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .top .main .other .visibility .graphic {
+  display: flex;
+  align-items: center;
+}
+
+.home .top .main .other .visibility .graphic svg {
+  margin-inline: .4vw;
+}
+
+.home .top .main .other .visibility .progressbar {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 7px;
+  width: 100%;
+}
+
+.home .top .main .other .visibility .progressbar .active {
+  border-radius: 10px;
+  height: 100%;
+  width: 56%;
+  background-color: var(--body-color);
+  transition: width 1s ease-in-out;
+}
+
+.home .top .main .other .visibility span {
+  margin-inline: auto;
+  font-weight: 600;
+}
+
+.home .top .main .sun {
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 1vw;
+  margin-inline: auto;
+}
+
+.home .top .main .sun div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 1vh;
+}
+
+.home .top .main .sun div span:first-child {
+  font-weight: 600;
+}
+
+.home .top .main .units {
+  display: flex;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.home .top .main .units div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-inline: .5vw;
+  background-color: #ffffff;
+  color: var(--container-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 
+    color .4s ease-in-out,
+    background-color .6s ease-in-out,
+    box-shadow .8s ease-in-out,
+    scale .4s ease-in-out;
+}
+
+.home .top .main .units div:hover {
+  color: #ffffff;
+  background-color: var(--body-color);
+  box-shadow: 0 -1px 0 0 #ffffff;
+  box-shadow: 1px 0 0 0 #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff;
+  box-shadow: 0 0 0 1px #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
+  scale: 0.95;
+}
+
+.home .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 1vw;
+  padding: 0 1vw;
+  width: 20%;
+}
+
+.home .column .wind, .home .column .air, .home .column .pressure {
+  margin-top: 1vh;
+}
+
+.home .location {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: .5vh .5vw;
+  height: fit-content;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.home .location .time {
+  font-size: var(--xxxl);
+  padding: 1vh 1vw;
+}
+
+.home .location .city, .home .location .coord {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fx);
+  border-top: 1px solid var(--body-color);
+  padding: 1vh 1vw;
+}
+
+.home .location .coord {
+  border-bottom: 1px solid var(--body-color);
+}
+
+.home .location button {
+  margin-top: 2vh;
+  padding: 1vh 1vw;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--body-color);
+  color: #ffffff;
+  font-family: var(--exten-family);
+  font-size: calc(var(--l) - 3px);
+  cursor: pointer;
+}
+
+.home .locations {
+  position: fixed;
+  top: 0;
+  margin-left: -100%;
+  width: fit-content;
+  height: 100vh;
+  width: 20%;
+  overflow-y: scroll;
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 1vw;
+  transition: margin-left 1s ease-in-out;
+}
+
+.home .locations.active {
+  margin-left: 0;
+}
+
+.home .locations div {
+  border-block: 1px var(--text-color) solid;
+  color: var(--text-color);
+  margin-block: 1vh;
+  padding: 1vh 1vw;
+  cursor: pointer;
+  transition: scale .3s ease-in-out;
+}
+
+.home .locations div:hover {
+  scale: 0.95;
+}
+
+@media screen and (max-width: 800px) {
+  .home .column {
+    width: 30%;
+  }
+
+  .home .location {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }  
+}
+
+@media screen and (max-width: 610px) {
+  .home .top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home .top .main {
+    width: 70%;
+    margin-inline: auto;
+  }
+
+  .home .column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: .5vh 3vw;
+    margin-block: .6vh;
+    width: 90%;
+  }
+
+  .home .column .wind, .home .column .air, .home .column .pressure {
+    margin-left: 1vw;
+  }
+
+  .home .column .temp, .home .column .wind, .home .column .air, .home .column .pressure {
+    margin-top: 1vh;
+    min-height: 120px;
+    width: 100%;
+  }
+
+  .home .column .pressure {
+    width: 40%;
+    min-height: 60px;
+    margin-top: 1vh;
+  }
+
+  .home .location {
+    position: relative;
+    color: var(--body-color);
+    margin-inline: auto;
+    width: 60%;
+  }  
+}
+
+@media screen and (max-width: 530px) { 
+  .home .top .main {
+    padding-inline: 2vw;
+  }
+  
+  .home .column {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-inline: auto;
+    margin-top: 1vh;
+    padding: 0;
+  }
+
+  .home .column .wind, .home .column .air, .home .column .solar, .home .column .pressure, .home .column .temp {
+    margin-left: 0;
+    width: 100%;
+    padding-inline: 2vw;
+  }
+
+  .home .location {
+    margin-top: 2vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home .top {
+    padding: 0;
+    padding-block: 2vh;
+  }
+  .home .top .main, .home .column, .home .location {
+    padding: 0;
+    padding-block: 1vh;
+    width: 78%;
+  }
+
+  .home .locations {
+    width: 50%;
+  }
+}

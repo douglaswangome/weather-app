@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Courgette&family=Handlee&family=Itim&family=Pacifico&display=swap');
+
+ *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,48 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --body-color: #42A5F5;
+  --container-color: #2196F3;
+  --text-color: #FFF;
+  --family: "Cookie";
+  --nuclear-family: "Courgette";
+  --exten-family: "Handlee";
+  --xxxl: 48px;
+  --xxl: 42px;
+  --fx: 30px;
+  --xl: 24px;
+  --l: 20px;
+}
+
+@media screen and (max-width: 745px) {
+  :root {
+    --xxxl: 36px;
+    --xxl: 28px;
+    --fx: 26px;
+    --xl: 24px;
+    --l: 20px;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  :root {
+    --xxxl: 34px;
+    --xxl: 26px;
+    --fx: 24px;
+    --xl: 22px;
+    --l: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    --xxxl: 48px;
+    --xxl: 42px;
+    --fx: 28px;
+    --xl: 24px;
+    --l: 20px;
+  }
 }

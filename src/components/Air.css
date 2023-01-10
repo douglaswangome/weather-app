@@ -1,0 +1,25 @@
+.air {
+  position: relative;
+  background-color: var(--body-color);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1vh 1vw;
+  height: fit-content;
+}
+
+.air .title {
+  font-family: var(--nuclear-family);
+  font-size: var(--xl);
+}
+
+.air div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  padding: 2vh 0;
+}
+
+.air div:nth-child(2) span:last-child {
+  margin-left: .3vw;
+  font-size: var(--xl);
+  font-weight: 600;
+}
